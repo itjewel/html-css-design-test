@@ -1,0 +1,210 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+header {
+    background-color: #fdfdfd;
+    color: #4e4e4e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom:1px solid #c6bfbf4a;
+
+ 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    width: 170px;
+}
+
+.logo {
+    flex: 1; /* Logo takes remaining space */
+  
+}
+
+.collapse-button {
+    background: none;
+    border: none;
+    color: #4e4e4e;
+    font-size: 18px;
+    margin-left: 10px; /* Adjust margin as needed */
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.collapse-button.collapsed i {
+    transform: rotate(180deg); /* Rotate the arrow icon when the button is collapsed */
+    cursor: pointer;
+}
+
+.left-menu {
+    background-color: #fdfdfd;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    transition: all 0.3s ease;
+    border-right:1px solid #c6bfbf4a;
+}
+.left-menu.collapsed {
+    transform: translateX(-100%); /* Hide the menu by shifting it left */
+}
+
+.left-menu ul {
+    list-style-type: none;
+    padding: 20px;
+}
+
+.left-menu ul li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+.left-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block; /* Make the anchor tag a block element */
+    border-radius: 5px; /* Rounded corners */
+    width: 100%; /* Make the anchor tag occupy full width */
+}
+
+
+
+.left-menu li.active a {
+    color: #4e4e4e; /* Change color for active menu item */
+    font-weight: bold; /* Bold font for active menu item */
+    padding: 8px; /* Add padding */   
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.3); /* Add bottom box shadow for active menu item */
+}
+
+.right-content {
+    padding: 20px;
+    margin-left: 220px; /* Adjust margin to account for the width of the left menu */
+    width: calc(100% - 220px); /* Set width to occupy full width initially */
+    transition: margin-left 0.3s ease, width 0.3s ease; /* Add transition for smooth animation */
+}
+
+.left-menu.collapsed + main .right-content {
+    margin-left: 0; /* Reset margin when left menu is collapsed */
+    width: calc(100% - 20px); /* Adjust width to occupy full width when left menu is collapsed */
+}
+
+
+.right-content h2 {
+    color: #333;
+}
+
+.right-content p {
+    color: #666;
+}
+
+
+.profile-picture{
+    height:40px;
+    border-radius: 50%;
+}
+
+
+.header-options-right {
+    width: 100%;
+    margin-left:50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line */
+}
+
+.profile-left-portions, .searching-right-portions {
+    display: flex;
+    align-items: center;
+}
+
+.header-profile-picture {
+    margin-right: 10px;
+}
+
+.header-profile-name {
+    margin-right: 20px;
+}
+
+.header-button-icons {
+    padding: 5px 8px 5px 8px;  /* Adjust padding as needed */
+    color: #655f5f66; /* Text color */
+    font-size:18px;
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+  }
+  .header-responsive-button-icons {
+    padding: 5px 8px 5px 8px;  /* Adjust padding as needed */
+    font-size: 19px;
+    margin-top: 6px;
+    color: #655f5fab; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+  }
+.header-notifications, .header-searching, .header-screen-resize, .header-settings {
+    position: relative;
+    margin-right: 10px;
+}
+
+.notification-badge {
+    position: absolute;
+    top: -5px; /* Adjust top position */
+    right: -5px; /* Adjust right position */
+    padding: 1px 5px 1px 5px;
+    color: #fff;
+    background: red;
+    border-radius: 50%;
+    font-weight: 400;
+    font-size: 11px;
+    
+  }
+
+
+
+
+.profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.responsive-icon {
+    display: none; /* Hide the responsive icon on tablets and smaller devices */
+}
+
+
+
+  /* CSS to style the icon inside the button */
+  .search-box {
+    padding: 6px; /* Add padding as needed */
+    border: 1px solid #ccc; /* Add border for the search box */
+    border-radius: 5px; /* Rounded corners */
+    box-sizing: border-box; /* Ensure padding and border are included in the width */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2390818159"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-size: 20px; /* Set size of the background image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: 10px center; /* Position the image */
+    padding-left: 35px; /* Adjust padding to accommodate the icon */
+    transition: border-color 0.3s; /* Add transition effect for border color */
+}
+
+.search-box:focus-visible {
+    outline: none; /* Remove default focus outline */
+    border: 1px solid #90818159; /* Add border color on focus-visible */
+    box-shadow: 0 0 0 3px rgba(144, 129, 129, 0.35); /* Add custom focus shadow */
+}
+
+
+

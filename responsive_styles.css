@@ -1,0 +1,71 @@
+/* Adjustments for tablets */
+@media only screen and (max-width: 768px) {
+   
+    header {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .logo-container {
+        margin-right: auto; /* Push the logo container to the left */
+    }
+
+    .header-options-right {
+        margin-left: auto; /* Push the right options to the right */
+    }
+
+    .left-menu {
+        width: 180px; /* Decrease the width of the left menu */
+    }
+
+    .right-content {
+        margin-left: 180px; /* Adjust margin to account for the width of the left menu */
+        width: calc(100% - 180px); /* Set width to occupy full width initially */
+    }
+
+    .left-menu.collapsed + main .right-content {
+        margin-left: 0; /* Reset margin when left menu is collapsed */
+        width: calc(100% - 20px); /* Adjust width to occupy full width when left menu is collapsed */
+    }
+}
+
+/* Adjustments for mobile devices */
+@media only screen and (max-width: 576px) {
+ 
+    .responsive-icon {
+        display: block; /* Show the responsive icon on mobile devices */
+    }
+
+    .header-options-left,
+    .header-options-right {
+        display: none; /* Hide the options on mobile devices */
+    }
+
+    header {
+        align-items: flex-start; /* Align items to the start of the container */
+        justify-content: space-between; 
+    }
+
+    .logo-container {
+        margin-right: 0; /* Reset margin */
+        margin-bottom: 10px; /* Add some spacing between logo and options */
+    }
+
+    .header-options-left,
+    .header-options-right {
+        margin-left: 0; /* Reset margin */
+    }
+
+    .left-menu {
+        width: 100%; /* Make the left menu occupy full width */
+    }
+
+    .left-menu.collapsed + main .right-content {
+        margin-left: 0; /* Reset margin when left menu is collapsed */
+        width: 100%; /* Adjust width to occupy full width when left menu is collapsed */
+    }
+
+    .right-content {
+        margin-left: 0; /* Reset margin */
+        width: 100%; /* Make the right content occupy full width */
+    }
+}
