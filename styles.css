@@ -50,7 +50,7 @@ header {
 
 .left-menu {
     background-color: #fdfdfd;
-    width: 200px;
+    width: 235px;
     height: 100vh;
     position: fixed;
     transition: all 0.3s ease;
@@ -206,5 +206,54 @@ header {
     box-shadow: 0 0 0 3px rgba(144, 129, 129, 0.35); /* Add custom focus shadow */
 }
 
+/* Styles for tabs */
+.tabcontent {
+    display: none;
+    padding: 10px;
+    border: 1px solid #8888883d;
+    border-top: none;
+  }
+
+  /* Style the buttons */
+  .tab-btn {
+    background-color: #f1f1f1;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .tab-header{
+    padding:10px 0px 0px 10px;
+}
+
+
+  /* Change background color of buttons on hover */
+  .tab-btn:hover {
+    background-color: #ddd;
+  }
+
+  /* Style the active button */
+  .modal-body .active {
+    background-color: #293b56; /* Background color for active tab */
+    color:#fdfdfd;
+  }
+
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
 
 

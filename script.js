@@ -17,12 +17,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+
+
 // Modal script
 // Get the modal
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('mySettingModal');
 
 // Get the button that opens the modal
-var btn = document.getElementById("openModalBtn");
+var btn = document.getElementById("openSettingModalBtn");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
@@ -58,3 +60,21 @@ function updateButtonText() {
   document.getElementById("percentage-btn").innerText = currentPercentage + "%";
 }
 
+
+ // Function to open the selected tab
+ function openTab(evt, tabName) {
+  var i, tabcontent, tabBtns;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tabBtns = document.getElementsByClassName("tab-btn");
+  for (i = 0; i < tabBtns.length; i++) {
+    tabBtns[i].classList.remove("active");
+  }
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.classList.add("active");
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();

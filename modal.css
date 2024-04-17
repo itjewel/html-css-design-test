@@ -18,7 +18,7 @@
     background-color: #fefefe;
    
     /* padding: 20px; */
-    border: 1px solid #888;
+    border: 1px solid #8888883d;
     width: 86%;
 }
 
@@ -56,7 +56,7 @@
   
   .percentage-btn {
     position: relative;
-    padding: 3px 25px;
+    padding: 8px 35px;
     font-size: 12px;
     font-weight: 500;
     background-color: #e6e6e6;
