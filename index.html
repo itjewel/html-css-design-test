@@ -42,7 +42,7 @@
                     <button class="header-button-icons"><i  class="fas fa-arrows-alt" id="resizeIcon"></i></button>
                 </div>
                 <div class="header-settings">
-                    <button class="header-button-icons"  id="openSettingModalBtn"><i class="fas fa-cog"></i></button>
+                    <button class="header-button-icons" class="openSettingModalBtn" onclick="openSettingModalBtn()"><i class="fas fa-cog"></i></button>
                 </div>
               
             </div>
@@ -56,8 +56,8 @@
     
     <div class="left-menu">        
         <ul>
-            <li class="active"><a href="#"><i class="fas fa-home"></i> Dashboard</a></li>
-            <li><a href="#">Membership management</a></li>
+            <li class="active"><a href="index.html"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#" class="openSettingModalBtn" onclick="openSettingModalBtn()">Membership management</a></li>
             <li><a href="#">Sels management</a></li>
             <li><a href="#">Funding management</a></li>
             <li><a href="#">Investment management</a></li>
@@ -72,12 +72,99 @@
     <main>
         <!-- Right portion content goes here -->
         <div class="right-content">
-            <!-- Add your content here -->
-            <h2>Main Content</h2>
-            <p>This is the main content of the dashboard.</p>
-            <!-- Button to open the modal -->
-           <!-- Button to open the modal -->
+            <!-- Add Main content here -->
+            <h3>회원상</h3>
+            <div class="category-lists">
+                <div class="first-row">
+                    <div class="point"></div>
+                       <h2 style="margin-right:10px;"> 회원상</h2>
+                        <button class="active"> 발급</button>
+                        <button class="active">블랙리스트</button>
+                        <button class="active">회원 탈퇴</button>
+                        <button class="active"> 발급</button>
+                        <button class="active">블랙리스트</button>
+                        <button class="active">회원 탈퇴</button>
+                        <div class="date-input-container">
+                            <input type="date" class="date-input" placeholder="Select Date">
+                            <i class="fas fa-calendar-alt"></i> <!-- Assuming you're using Font Awesome for icons -->
+                          </div>
+                </div><br/>
+                <div style="display: flex; justify-content:space-between;">
+                    <div class="second-row">
+                        <div class="point"></div>
+                        <h2 style="margin-right:10px;"> 회원상</h2>
+                        <div>
+                                <input type="checkbox" id="entity">
+                                <label for="entity">회원상</label>
+                        </div>
+                        <div>
+                                <input type="checkbox" id="PC">
+                                <label for="PC">회원상</label>
+                        </div>
+                        <div>
+                                <input type="checkbox" id="web">
+                                <label for="web">회원상</label>
+                        </div>
+
+                        <div>
+                                <input type="checkbox" id="mobile">
+                                <label for="mobile">회원상</label>
+                        </div>
+                    </div>
+
+                    <div class="second-row">
+                        <div class="point"></div>
+                        <h2 style="margin-right:10px;"> 회원상</h2>
+                        <div class="point"></div>
+                        <h2 style="margin-right:10px;"> 회원상</h2>
+                        <div>
+                                <input type="checkbox" id="entity">
+                                <label for="entity">회원상</label>
+                        </div>
+                        <div>
+                                <input type="checkbox" id="PC">
+                                <label for="PC">회원상</label>
+                        </div>
+                        <div>
+                                <input type="checkbox" id="web">
+                                <label for="web">회원상</label>
+                        </div>
+
+                        <div>
+                                <input type="checkbox" id="mobile">
+                                <label for="mobile">회원상</label>
+                        </div>
+                    </div>
+                </div>
+
+<br/>
+                <div class="second-row">
+                    <div class="point"></div>
+                    <h2 style="margin-right:10px;"> 회원상</h2>
+                    <div>
+                            <input type="checkbox" id="entity">
+                            <label for="entity">회원상</label>
+                    </div>
+                    <div>
+                            <input type="checkbox" id="PC">
+                            <label for="PC">회원상</label>
+                    </div>
+                    <div>
+                            <input type="checkbox" id="web">
+                            <label for="web">회원상</label>
+                    </div>
+
+                    <div>
+                            <input type="checkbox" id="mobile">
+                            <label for="mobile">회원상</label>
+                    </div>
+                </div>
+
+
+            </div>
+            <!-- End main content content here -->
             
+         
 
             <!-- The Modal -->
             <div id="mySettingModal" class="modal">
@@ -98,57 +185,94 @@
                 </div>
                 <div class="modal-body">
                         <div class="tab-header">
-                            <h3>Membership Award</h3>
+                            <h3>회원상</h3>
                             <hr style="border: 1px solid #8888883d;"/>
                             <br/>
-                            <button class="tab-btn active" onclick="openTab(event, 'Tab1')" id="defaultOpen">Tab 1</button>
-                            <button class="tab-btn" onclick="openTab(event, 'Tab2')">Tab 2</button>
-                            <button class="tab-btn" onclick="openTab(event, 'Tab3')">Tab 3</button>
+                            <div style="margin-left:5px;">
+                                <button class="tab-btn active" onclick="openTab(event, 'Tab1')" id="defaultOpen">기본 정보 관리</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab2')">투자 유형 관리</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab3')">입출금 내역 확인</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab4')">입출금 내역 확인</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab5')">입출금 내역 확인</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab6')">입출금 내역 확인</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab7')">입출금 내역 확인</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab8')">입출금 내역 확인</button>
+                                <button class="tab-btn" onclick="openTab(event, 'Tab9')">입출금 내역 확인</button>
+                            </div>
                         </div>
 
                        
                         <div id="Tab1" class="tabcontent" style="display:block;">
                             <div class="tab-titles">
                                 <div class="tab-title-left">
-                                    Left
+                                   <h3> Left menu here</h3>
                                 </div>
                                 <div class="tab-title-right">
-                                    Left
+                                    <button class="tab-title-btn active">임시비밀번호 발급</button>
+                                    <button class="tab-title-btn active">블랙리스트 등록</button>
+                                    <button class="tab-title-btn active">회원 탈퇴</button>
                                 </div>
-                            </div>
+                            </div><br/>
                             <table>
                                 <tr>
-                                <th>Attribute</th>
-                                <th>Value</th>
+                                    <th  colspan="2">Attribute</th>
+                                    <td>Value</td>
                                 </tr>
                                 <tr>
-                                <td>Name</td>
-                                <td>John Doe</td>
+                                    <th rowspan="2">Attribute</th>
+                                    <th>Attribute</th>
+                                    <td>Value</td>
                                 </tr>
                                 <tr>
-                                <td>Email</td>
-                                <td>john@example.com</td>
+                                    <th>Attribute</th>
+                                    <td>Value</td>
+                                </tr>
+
+                                <tr>
+                                    <th rowspan="2">Attribute</th>
+                                    <th>Attribute</th>
+                                    <td>Value</td>
                                 </tr>
                                 <tr>
-                                <td>Age</td>
-                                <td>30</td>
+                                    <th>Attribute</th>
+                                    <td>Value</td>
                                 </tr>
                                 <tr>
-                                <td>Location</td>
-                                <td>New York</td>
+                                    <th  colspan="2">Attribute</th>
+                                    <td>Value</td>
                                 </tr>
+                                <tr>
+                                    <th  colspan="2">Attribute</th>
+                                    <td>Value</td>
+                                </tr>
+                               
                                 <!-- Add more rows for additional profile details -->
                             </table>
                         </div>
 
                         <div id="Tab2" class="tabcontent">
-                        <h3>Tab 2 Content</h3>
-                        <p>This is the content of tab 2.</p>
+                          <h3>Tab 2 Content</h3>
                         </div>
-
                         <div id="Tab3" class="tabcontent">
-                        <h3>Tab 3 Content</h3>
-                        <p>This is the content of tab 3.</p>
+                         <h3>Tab 3 Content</h3>
+                        </div>
+                        <div id="Tab4" class="tabcontent">
+                         <h3>Tab 4 Content</h3>
+                        </div>
+                        <div id="Tab5" class="tabcontent">
+                          <h3>Tab 5 Content</h3>
+                        </div>
+                        <div id="Tab6" class="tabcontent">
+                          <h3>Tab 6 Content</h3>
+                        </div>
+                        <div id="Tab7" class="tabcontent">
+                          <h3>Tab 7 Content</h3>
+                        </div>
+                        <div id="Tab8" class="tabcontent">
+                          <h3>Tab 8 Content</h3>
+                        </div>
+                        <div id="Tab9" class="tabcontent">
+                          <h3>Tab 9 Content</h3>
                         </div>
                 </div>
             </div>

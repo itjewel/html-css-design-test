@@ -26,6 +26,7 @@
         margin-left: 0; /* Reset margin when left menu is collapsed */
         width: calc(100% - 20px); /* Adjust width to occupy full width when left menu is collapsed */
     }
+    
 }
 
 /* Adjustments for mobile devices */
@@ -68,4 +69,31 @@
         margin-left: 0; /* Reset margin */
         width: 100%; /* Make the right content occupy full width */
     }
+
+    
 }
+
+@media screen and (max-width: 600px) {
+    table {
+      width: 100%;
+      display: block;
+      overflow-x: auto;
+    }
+  
+    th, td {
+      width: auto;
+      white-space: nowrap;
+    }
+  
+    th:nth-child(1), td:nth-child(1) {
+      min-width: 100px; /* Minimum width for first column */
+    }
+    
+    th:nth-child(2), td:nth-child(2) {
+      min-width: 150px; /* Minimum width for second column */
+    }
+  
+    /* Define minimum width for other columns as needed */
+
+    
+  }

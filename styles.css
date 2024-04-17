@@ -222,6 +222,15 @@ header {
     padding: 10px 20px;
     cursor: pointer;
     transition: 0.3s;
+    margin-left: -5px;
+  }
+  .tab-title-btn{
+    background-color: #f1f1f1;
+    border: none;
+    color: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
   }
   .tab-header{
     padding:10px 0px 0px 10px;
@@ -243,6 +252,28 @@ header {
     color:#fdfdfd;
   }
 
+  .first-row{display: flex;justify-content: flex-start;}
+  .first-row .active {
+    background-color: #293b56; /* Background color for active tab */
+    color:#fdfdfd;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right:10px;
+  }
+
+  .second-row{display: flex;justify-content: flex-start;}
+  .second-row .active {
+    background-color: #293b56; /* Background color for active tab */
+    color:#fdfdfd;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right:10px;
+  }
+
 
   table {
     width: 100%;
@@ -250,14 +281,93 @@ header {
     margin-bottom: 20px;
   }
   
-  th, td {
-    padding: 8px;
+th, td {
+    padding: 11px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
+    border: 2px solid #fefefe;
+}
   
   th {
     background-color: #f2f2f2;
+  } 
+  tr td{
+    border:2px solid #dddddd63;
+    width:75%;
   }
 
 
+  .date-input-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .date-input {
+    width: 200px; /* Adjust width as needed */
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  .date-input:focus {
+    outline: none;
+  }
+  
+  .fa-calendar-alt {
+    position: absolute;
+    top: 50%;
+    right: 10px; /* Adjust right positioning as needed */
+    transform: translateY(-50%);
+    color: #aaa; /* Adjust icon color as needed */
+    pointer-events: none; /* Ensure the icon doesn't interfere with input focus */
+  }
+  
+  .point {
+    width: 5px;
+    height: 5px;
+    margin-top:12px;
+    margin-right:12px;
+    background-color: rgb(27, 8, 8);
+    border-radius: 50%; /* Makes the div round */
+  }
+  
+
+  /* Hide the default checkbox */
+input[type="checkbox"] {
+    display: none;
+  }
+  
+  /* Style the custom checkbox */
+  input[type="checkbox"] + label {
+    display: inline-block;
+    cursor: pointer;
+    padding-left: 25px; /* Space for the custom checkbox */
+  }
+  
+  /* Style the custom checkbox appearance */
+  input[type="checkbox"] + label:before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ccc;
+    background-color: white;
+    border-radius: 3px;
+    margin-right: 10px;
+    vertical-align: middle;
+  }
+  
+  /* Style the custom checkbox when checked */
+  input[type="checkbox"]:checked + label:before {
+    background-color: #293b56; /* Change color when checked */
+  }
+  
+  /* Style the checkmark */
+  input[type="checkbox"] + label:before {
+    content: "\2713"; /* Unicode checkmark character */
+    font-size: 14px;
+    color: white; /* Color of checkmark */
+    line-height: 18px;
+    text-align: center;
+  }
+  

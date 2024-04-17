@@ -56,7 +56,7 @@
   
   .percentage-btn {
     position: relative;
-    padding: 8px 35px;
+    padding: 7px 25px;
     font-size: 12px;
     font-weight: 500;
     background-color: #e6e6e6;
@@ -73,7 +73,7 @@
   }
   
   .percentage-btn:before {
-    content: "+";
+    content: "-";
     position: absolute;
     left: 5px;
     font-weight: 500;
@@ -82,7 +82,7 @@
 }
   
   .percentage-btn:after {
-    content: "-";
+    content: "+";
     position: absolute;
     right: 5px;
     font-weight: 500;
