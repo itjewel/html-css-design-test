@@ -1,0 +1,96 @@
+ 
+ 
+ /* Style the modal */
+ .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 13%;
+    top: 64px;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+
+  /* Modal content */
+  .modal-content {  
+    position: relative;
+    background-color: #fefefe;
+   
+    /* padding: 20px; */
+    border: 1px solid #888;
+    width: 86%;
+}
+
+
+  /* Modal header */
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #524d52; /* Set the header background color */
+    color: #fff; /* Set the text color */
+    padding: 10px; /* Add some padding */
+  }
+
+  /* Close button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+ 
+  
+  .button-modal-percentage {
+    display: flex;
+    align-items: center;
+  }
+  
+  .percentage-btn {
+    position: relative;
+    padding: 3px 25px;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #e6e6e6;
+    font-family: system-ui;
+    color: #312e2e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+  .percentage-btn:hover {
+    background-color: #e6e6e6;
+  }
+  
+  .percentage-btn:before {
+    content: "+";
+    position: absolute;
+    left: 5px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: -5px;
+}
+  
+  .percentage-btn:after {
+    content: "-";
+    position: absolute;
+    right: 5px;
+    font-weight: 500;
+    font-size: 17px;
+    margin-top: -5px;
+  }
+  
+            
+  
+ 
+ 

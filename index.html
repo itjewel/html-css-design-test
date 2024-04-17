@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modal.css">
     <link rel="stylesheet" href="responsive_styles.css">
 </head>
 <body>
@@ -74,6 +75,39 @@
             <!-- Add your content here -->
             <h2>Main Content</h2>
             <p>This is the main content of the dashboard.</p>
+            <!-- Button to open the modal -->
+           <!-- Button to open the modal -->
+            <button id="openModalBtn">Open Modal</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                
+                  <div class="button-modal-percentage">
+                    <button id="percentage-btn" class="percentage-btn" onclick="togglePercentage()">50%</button>
+                  </div>
+                  <div class="button-modal-range">
+                  <input id="progress-input" type="range" min="0" max="100" value="50" step="1" onchange="updateProgress(this.value)" />
+                  </div>
+                  <div class="button-modal-close">
+                        <span class="close">&times;</span>
+                    </div>
+                </div>
+                <div class="modal-body">
+                <p>This is a simple HTML modal.</p>
+                </div>
+            </div>
+
+            </div>
+
+
+
+
+
+
         </div>
     </main>
     <script src="script.js"></script>
