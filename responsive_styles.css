@@ -26,6 +26,11 @@
         margin-left: 0; /* Reset margin when left menu is collapsed */
         width: calc(100% - 20px); /* Adjust width to occupy full width when left menu is collapsed */
     }
+
+    .find-portion {
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: stretch; /* Stretch buttons to full width */
+      }
     
 }
 
@@ -94,6 +99,63 @@
     }
   
     /* Define minimum width for other columns as needed */
+    .checkbox-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  
+    .checkbox-row > div {
+        margin-bottom: 10px;
+    }
+  
+    .search-row {
+      flex-direction: column;
+      align-items: stretch;
+  }
+  
+  .search-row .combo-box,
+  .search-row .full-cover-input {
+      width: 100%;
+      max-width: none;
+      margin-right: 0;
+      margin-top: 10px;
+  }
 
+  /* Adjustments for the .first-row */
+  .first-row {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  /* Style for the buttons */
+  .first-row .active,
+  .checkbox-row .active,
+  .search-row .active,
+  .full-cover-input,
+  .date-input,
+  .combo-box select {
+    width: 100%; /* Occupy full width */
+    margin: 5px 0; /* Add margin for spacing */
+  }
+
+  /* Style for the date input container */
+  .date-input-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
     
   }
+
+
+  /* Media query for desktop */
+@media only screen and (min-width: 768px) {
+    .find-portion {
+      margin-left: auto; /* Push buttons to the right */
+      width: 50%; /* Half of the screen width */
+    }
+  }
+  
+  
+
+
+  

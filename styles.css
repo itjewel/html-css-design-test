@@ -88,10 +88,10 @@ header {
 }
 
 .right-content {
-    padding: 20px;
-    margin-left: 220px; /* Adjust margin to account for the width of the left menu */
-    width: calc(100% - 220px); /* Set width to occupy full width initially */
-    transition: margin-left 0.3s ease, width 0.3s ease; /* Add transition for smooth animation */
+  padding: 20px;
+  margin-left: 238px;
+  width: calc(100% - 238px);
+  transition: margin-left 0.3s ease, width 0.3s ease;
 }
 
 .left-menu.collapsed + main .right-content {
@@ -252,28 +252,7 @@ header {
     color:#fdfdfd;
   }
 
-  .first-row{display: flex;justify-content: flex-start;}
-  .first-row .active {
-    background-color: #293b56; /* Background color for active tab */
-    color:#fdfdfd;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-right:10px;
-  }
-
-  .second-row{display: flex;justify-content: flex-start;}
-  .second-row .active {
-    background-color: #293b56; /* Background color for active tab */
-    color:#fdfdfd;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-right:10px;
-  }
-
+  
 
   table {
     width: 100%;
@@ -296,18 +275,96 @@ th, td {
   }
 
 
-  .date-input-container {
-    position: relative;
-    display: inline-block;
+  .category-lists{
+    background: #f6f8f7;
+    padding:20px;
+    border-radius: 10px;
   }
+
+  /* Adjustments for the .first-row */
+.first-row {
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+/* Style for the buttons */
+.first-row .active {
+  background-color: #293b56;
+  color: #fdfdfd;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+/* Common styles */
+.find-portion {
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+}
+
+.find-portion .active {
+  background-color: #293b56;
+  color: #fdfdfd;
   
-  .date-input {
-    width: 200px; /* Adjust width as needed */
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
+}
+button{
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+  .checkbox-row{display: flex;justify-content: flex-start;}
+  .checkbox-row .active {
+    background-color: #293b56; /* Background color for active tab */
+    color:#fdfdfd;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right:10px;
   }
+
+  .search-row{display: flex;justify-content: center;}
+  .search-row .active {
+    background-color: #293b56; /* Background color for active tab */
+    color:#fdfdfd;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-right:10px;
+  }
+
+  .full-cover-input {
+    flex: 1; /* Take up remaining space */
+    margin-left: 10px; /* Add some space between the combo box and the input */
+    padding: 10px; /* Add padding for styling */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+  /* Style for the date input container */
+.date-input-container {
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-left: 10px; /* Add margin between the buttons and the input */
+}
+
+/* Style for the date input */
+.date-input {
+  width: 100%; /* Occupy all available width */
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
   
   .date-input:focus {
     outline: none;
@@ -370,4 +427,33 @@ input[type="checkbox"] {
     line-height: 18px;
     text-align: center;
   }
+
+  /* Style for combo box container */
+/* Style for combo box container */
+.combo-box {
+  position: relative; /* Ensure proper positioning of the icon */
+  display: inline-block;
+}
+
+/* Style for select dropdown */
+.combo-box select {
+  width: 200px; /* Adjust width as needed */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  appearance: none; /* Remove default dropdown arrow */
+}
+
+/* Style for dropdown icon */
+.combo-box i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Ensure the icon does not interfere with select */
+}
+
   
