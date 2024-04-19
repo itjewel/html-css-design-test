@@ -78,12 +78,12 @@
                 <div class="first-row">
                     <div class="point"></div>
                        <p style="margin-right:10px;"> 회원상</p>
-                        <button class="active"> 발급</button>
-                        <button class="active">블랙리스트</button>
-                        <button class="active">회원 탈퇴</button>
-                        <button class="active"> 발급</button>
-                        <button class="active">블랙리스트</button>
-                        <button class="active">회원 탈퇴</button>
+                        <button class="active button-radius"> 발급</button>
+                        <button class="button-radius">블랙리스트</button>
+                        <button class="button-radius">회원 탈퇴</button>
+                        <button class="button-radius"> 발급</button>
+                        <button class="button-radius">블랙리스트</button>
+                        <button class="button-radius">회원 탈퇴</button>
                         <div class="date-input-container">
                             <input type="date" class="date-input" placeholder="Select Date">
                         </div>
@@ -174,9 +174,9 @@
             </div>
             <br/>
             <div class="find-portion" style="display: flex; justify-content:space-between;">
-                <button class="active">블랙리스트</button>
+                <button class="active button-radius">블랙리스트</button>
             
-                <button>블랙리스트</button>
+                <button class="button-radius">블랙리스트</button>
             </div><br/><br/>
 
             <div class="find-download">
@@ -201,7 +201,7 @@
                         </select>
                         <i class="fa fa-chevron-down" aria-hidden="true"></i> <!-- Font Awesome dropdown icon -->
                     </div>
-                    <button class="find-download-button">블랙리스트</button>
+                    <button class="find-download-button button-radius">블랙리스트</button>
                 </div>
             </div><br/>
             <hr/>
@@ -209,27 +209,59 @@
 
             <!-------Action Section------>
             <div class="action-download">
-                <p class="action-text">100 members waiting list</p>
-            
                 <div>
-                  
-                    <div class="combo-box">
-                        <select>
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
-                            <option value="option4">Option 4</option>
-                        </select>
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i> <!-- Font Awesome dropdown icon -->
-                    </div>
-                    <button class="active">블랙리스트</button>
+                    <button class="active button-radius">블랙</button>
                 </div>
-            </div><br/>
+                <div class="action-download-options">
+                    <p class="action-text">100 members waiting list</p>            
+                    <div>                  
+                        <div class="combo-box">
+                            <select>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="option3">Option 3</option>
+                                <option value="option4">Option 4</option>
+                            </select>
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i> <!-- Font Awesome dropdown icon -->
+                        </div>
+                        <button class="active button-radius">블랙리스트</button>
+                </div>
+            </div>
+            </div>
+            <br/>
 
               <!-------Withdrawn Members Section------>
               <div class="withdraw-members">
-                Table list here
-             </div><br/>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" style="display:block;" name="checkbox"></th>
+                            <th>No</th>
+                            <th>Col3</th>
+                            <th>Col4</th>
+                            <th>Col5</th>
+                            <th>Col6</th>
+                            <th>Col7</th>
+                            <th>Col8</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" style="display:block;" name="checkbox"></td>
+                            <td>1</td>
+                            <td>Data3</td>
+                            <td>Data4</td>
+                            <td>Data5</td>
+                            <td>Data6</td>
+                            <td>Data7</td>
+                            <td>Data8</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+             <br/>
 
 
 

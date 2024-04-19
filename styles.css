@@ -8,7 +8,19 @@
 body {
     font-family: Arial, sans-serif;
 }
+button{
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
 
+.button-radius{
+  margin-left: 5px;
+  box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5);
+  background: #fdfdfd;
+  border-radius: 7px;
+}
 
 header {
     background-color: #fdfdfd;
@@ -254,25 +266,24 @@ header {
 
   
 
-  table {
+  .tabcontent table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
-  }
-  
-th, td {
+}
+.tabcontent th,
+.tabcontent td {
     padding: 11px;
     text-align: left;
     border: 2px solid #fefefe;
 }
-  
-  th {
+.tabcontent th {
     background-color: #f2f2f2;
-  } 
-  tr td{
-    border:2px solid #dddddd63;
-    width:75%;
-  }
+}
+.tabcontent tr td {
+    border: 2px solid #dddddd63;
+    width: 75%;
+}
 
 
   .category-lists{
@@ -287,6 +298,7 @@ th, td {
   align-items: center; /* Align items vertically */
 }
 
+
 /* Style for the buttons */
 .first-row .active {
   background-color: #293b56;
@@ -295,7 +307,6 @@ th, td {
   padding: 8px 20px;
   cursor: pointer;
   transition: 0.3s;
-  margin-right: 10px;
 }
 /* Common styles */
 .find-portion {
@@ -316,17 +327,21 @@ th, td {
   background-color: #717f94;
   color: #fdfdfd;
 }
-.action-download{
+.action-download-options{
   display: flex;
   justify-content:flex-end;
 }
-.action-text{ padding:5px 16px;}
-button{
-  border: none;
-  padding: 8px 20px;
-  cursor: pointer;
-  transition: 0.3s;
+.action-download{
+  display: flex;
+  justify-content:space-between;
 }
+.action-download .active {
+  background-color: #293b56;
+  color: #fdfdfd;
+  
+}
+.action-text{ padding:5px 16px;}
+
 
 
 
@@ -469,4 +484,24 @@ input[type="checkbox"] {
   pointer-events: none; /* Ensure the icon does not interfere with select */
 }
 
+
+.withdraw-members table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.withdraw-members table th, .withdraw-members table td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.withdraw-members table th {
+  background-color: #f2f2f2;
+}
+.withdraw-members table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.withdraw-members table tbody tr td input[type="checkbox"] {
+  transform: scale(1.5);
+  margin-right: 5px;
+}
   
