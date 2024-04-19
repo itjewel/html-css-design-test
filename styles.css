@@ -308,6 +308,19 @@ th, td {
   color: #fdfdfd;
   
 }
+.find-download{
+  display: flex;
+  justify-content:space-between;
+}
+.find-download-button {
+  background-color: #717f94;
+  color: #fdfdfd;
+}
+.action-download{
+  display: flex;
+  justify-content:flex-end;
+}
+.action-text{ padding:5px 16px;}
 button{
   border: none;
   padding: 8px 20px;
