@@ -4,7 +4,7 @@
  .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 1111; /* Sit on top */
     left: 13%;
     top: 64px;
     width: 100%; /* Full width */

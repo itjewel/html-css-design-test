@@ -1,102 +1,110 @@
 /* Reset some default styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  margin-top: 60px;
 }
-button{
+
+button {
   border: none;
   padding: 8px 20px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.button-radius{
+.button-radius {
   margin-left: 5px;
+  margin-bottom: 5px;
   box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.5);
   background: #fdfdfd;
   border-radius: 7px;
 }
 
 header {
-    background-color: #fdfdfd;
-    color: #4e4e4e;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom:1px solid #c6bfbf4a;
-
- 
+  background-color: #fdfdfd;
+  color: #4e4e4e;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #c6bfbf4a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
-    width: 170px;
+  display: flex;
+  align-items: center;
+  width: 313px;
+  height: 45px;
 }
 
 .logo {
-    flex: 1; /* Logo takes remaining space */
-  
+  flex: 1;
 }
 
 .collapse-button {
-    background: none;
-    border: none;
-    color: #4e4e4e;
-    font-size: 18px;
-    margin-left: 10px; /* Adjust margin as needed */
-    transition: transform 0.3s ease;
-    cursor: pointer;
+  background: none;
+  border: none;
+  color: #4e4e4e;
+  font-size: 18px;
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .collapse-button.collapsed i {
-    transform: rotate(180deg); /* Rotate the arrow icon when the button is collapsed */
-    cursor: pointer;
+  transform: rotate(180deg);
 }
 
 .left-menu {
-    background-color: #fdfdfd;
-    width: 235px;
-    height: 100vh;
-    position: fixed;
-    transition: all 0.3s ease;
-    border-right:1px solid #c6bfbf4a;
+  margin-top: 8px;
+  background-color: #fdfdfd;
+  width: 238px;
+  height: 100vh;
+  position: fixed;
+  transition: all 0.3s ease;
+  border-right: 1px solid #c6bfbf4a;
+  z-index: 1000;
+  font-size:13px;
 }
+
 .left-menu.collapsed {
-    transform: translateX(-100%); /* Hide the menu by shifting it left */
+  transform: translateX(-100%);
 }
 
 .left-menu ul {
-    list-style-type: none;
-    padding: 20px;
+  list-style-type: none;
+  padding: 20px;
 }
 
 .left-menu ul li {
-    padding: 10px 0;
-    cursor: pointer;
+  padding: 10px 0;
+  cursor: pointer;
 }
+
 .left-menu li a {
-    text-decoration: none;
-    color: black;
-    display: block; /* Make the anchor tag a block element */
-    border-radius: 5px; /* Rounded corners */
-    width: 100%; /* Make the anchor tag occupy full width */
+  text-decoration: none;
+  color: black;
+  display: block;
+  border-radius: 5px;
+  width: 100%;
 }
-
-
 
 .left-menu li.active a {
-    color: #4e4e4e; /* Change color for active menu item */
-    font-weight: bold; /* Bold font for active menu item */
-    padding: 8px; /* Add padding */   
-    border-radius: 5px; /* Rounded corners */
-    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.3); /* Add bottom box shadow for active menu item */
+  color: #4e4e4e;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.3);
 }
 
 .right-content {
@@ -107,199 +115,183 @@ header {
 }
 
 .left-menu.collapsed + main .right-content {
-    margin-left: 0; /* Reset margin when left menu is collapsed */
-    width: calc(100% - 20px); /* Adjust width to occupy full width when left menu is collapsed */
+  margin-left: 0;
+  width: calc(100% - 20px);
 }
 
-
 .right-content h2 {
-    color: #333;
+  color: #333;
 }
 
 .right-content p {
-    color: #666;
+  color: #666;
 }
 
-
-.profile-picture{
-    height:40px;
-    border-radius: 50%;
+.profile-picture {
+  height: 40px;
+  border-radius: 50%;
 }
-
 
 .header-options-right {
-    width: 100%;
-    margin-left:50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Add this line */
+  width: 100%;
+  margin-left: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .profile-left-portions, .searching-right-portions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .header-profile-picture {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .header-profile-name {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .header-button-icons {
-    padding: 5px 8px 5px 8px;  /* Adjust padding as needed */
-    color: #655f5f66; /* Text color */
-    font-size:18px;
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor style */
-  }
-  .header-responsive-button-icons {
-    padding: 5px 8px 5px 8px;  /* Adjust padding as needed */
-    font-size: 19px;
-    margin-top: 6px;
-    color: #655f5fab; /* Text color */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Cursor style */
-  }
+  padding: 5px 8px;
+  color: #655f5f66;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-responsive-button-icons {
+  padding: 5px 8px;
+  font-size: 19px;
+  margin-top: 6px;
+  color: #655f5fab;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .header-notifications, .header-searching, .header-screen-resize, .header-settings {
-    position: relative;
-    margin-right: 10px;
+  position: relative;
+  margin-right: 10px;
 }
 
 .notification-badge {
-    position: absolute;
-    top: -5px; /* Adjust top position */
-    right: -5px; /* Adjust right position */
-    padding: 1px 5px 1px 5px;
-    color: #fff;
-    background: red;
-    border-radius: 50%;
-    font-weight: 400;
-    font-size: 11px;
-    
-  }
-
-
-
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  padding: 1px 5px;
+  color: #fff;
+  background: red;
+  border-radius: 50%;
+  font-weight: 400;
+  font-size: 11px;
+}
 
 .profile-image {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .responsive-icon {
-    display: none; /* Hide the responsive icon on tablets and smaller devices */
+  display: none;
 }
 
-
-
-  /* CSS to style the icon inside the button */
-  .search-box {
-    padding: 6px; /* Add padding as needed */
-    border: 1px solid #ccc; /* Add border for the search box */
-    border-radius: 5px; /* Rounded corners */
-    box-sizing: border-box; /* Ensure padding and border are included in the width */
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2390818159"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
-    background-size: 20px; /* Set size of the background image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-position: 10px center; /* Position the image */
-    padding-left: 35px; /* Adjust padding to accommodate the icon */
-    transition: border-color 0.3s; /* Add transition effect for border color */
+.search-box {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%2390818159"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 0 0 1.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 0 0-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 0 0 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  padding-left: 35px;
+  transition: border-color 0.3s;
 }
 
 .search-box:focus-visible {
-    outline: none; /* Remove default focus outline */
-    border: 1px solid #90818159; /* Add border color on focus-visible */
-    box-shadow: 0 0 0 3px rgba(144, 129, 129, 0.35); /* Add custom focus shadow */
+  outline: none;
+  border: 1px solid #90818159;
+  box-shadow: 0 0 0 3px rgba(144, 129, 129, 0.35);
 }
 
-/* Styles for tabs */
 .tabcontent {
-    display: none;
-    padding: 10px;
-    border: 1px solid #8888883d;
-    border-top: none;
-  }
-
-  /* Style the buttons */
-  .tab-btn {
-    background-color: #f1f1f1;
-    border: none;
-    color: #000;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-left: -5px;
-  }
-  .tab-title-btn{
-    background-color: #f1f1f1;
-    border: none;
-    color: #000;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  .tab-header{
-    padding:10px 0px 0px 10px;
-}
-.tab-titles{
-    display: flex;
-    justify-content: space-between;
+  display: none;
+  padding: 10px;
+  border: 1px solid #8888883d;
+  border-top: none;
 }
 
-
-  /* Change background color of buttons on hover */
-  .tab-btn:hover {
-    background-color: #ddd;
-  }
-
-  /* Style the active button */
-  .modal-body .active {
-    background-color: #293b56; /* Background color for active tab */
-    color:#fdfdfd;
-  }
-
-  
-
-  .tabcontent table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+.tab-btn {
+  background-color: #f1f1f1;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-left: -5px;
 }
+
+.tab-title-btn {
+  background-color: #f1f1f1;
+  border: none;
+  color: #000;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tab-header {
+  padding: 10px 0 0 10px;
+}
+
+.tab-titles {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-btn:hover {
+  background-color: #ddd;
+}
+
+.modal-body .active {
+  background-color: #293b56;
+  color: #fdfdfd;
+}
+
+.tabcontent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
 .tabcontent th,
 .tabcontent td {
-    padding: 11px;
-    text-align: left;
-    border: 2px solid #fefefe;
+  padding: 11px;
+  text-align: left;
+  border: 2px solid #fefefe;
 }
+
 .tabcontent th {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
+
 .tabcontent tr td {
-    border: 2px solid #dddddd63;
-    width: 75%;
+  border: 2px solid #dddddd63;
+  width: 75%;
 }
 
+.category-lists {
+  background: #f6f8f7;
+  padding: 20px;
+  border-radius: 10px;
+}
 
-  .category-lists{
-    background: #f6f8f7;
-    padding:20px;
-    border-radius: 10px;
-  }
-
-  /* Adjustments for the .first-row */
 .first-row {
   display: flex;
-  align-items: center; /* Align items vertically */
+  align-items: center;
 }
 
-
-/* Style for the buttons */
 .first-row .active {
   background-color: #293b56;
   color: #fdfdfd;
@@ -308,200 +300,241 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
-/* Common styles */
+
 .find-portion {
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: flex-end;
 }
 
 .find-portion .active {
   background-color: #293b56;
   color: #fdfdfd;
-  
 }
-.find-download{
+
+.find-download {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
+
 .find-download-button {
   background-color: #717f94;
   color: #fdfdfd;
 }
-.action-download-options{
+
+.action-download-options {
   display: flex;
-  justify-content:flex-end;
+  justify-content: flex-end;
 }
-.action-download{
+
+.action-download {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
 }
+
 .action-download .active {
   background-color: #293b56;
   color: #fdfdfd;
-  
-}
-.action-text{ padding:5px 16px;}
-
-
-
-
-  .checkbox-row{display: flex;justify-content: flex-start;}
-  .checkbox-row .active {
-    background-color: #293b56; /* Background color for active tab */
-    color:#fdfdfd;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-right:10px;
-  }
-
-  .search-row{display: flex;justify-content: center;}
-  .search-row .active {
-    background-color: #293b56; /* Background color for active tab */
-    color:#fdfdfd;
-    border: none;
-    padding: 8px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin-right:10px;
-  }
-
-  .full-cover-input {
-    flex: 1; /* Take up remaining space */
-    margin-left: 10px; /* Add some space between the combo box and the input */
-    padding: 10px; /* Add padding for styling */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box; /* Include padding and border in width calculation */
 }
 
-  /* Style for the date input container */
-.date-input-container {
-  flex: 1; /* Take up remaining space */
+.action-text {
+  padding: 5px 16px;
+}
+
+.checkbox-row {
   display: flex;
-  align-items: center; /* Align items vertically */
-  margin-left: 10px; /* Add margin between the buttons and the input */
+  justify-content: flex-start;
 }
 
-/* Style for the date input */
+.checkbox-row .active {
+  background-color: #293b56;
+  color: #fdfdfd;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.search-row {
+  display: flex;
+  justify-content: center;
+}
+
+.search-row .active {
+  background-color: #293b56;
+  color: #fdfdfd;
+  border: none;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+.full-cover-input {
+  flex: 1;
+  margin-left: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.date-input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
 .date-input {
-  width: 100%; /* Occupy all available width */
+  width: 100%;
   padding: 8px;
   border: 1px solid #ddd;
   border-radius: 4px;
   box-sizing: border-box;
 }
-  
-  .date-input:focus {
-    outline: none;
-  }
-  
-  .fa-calendar-alt {
-    position: absolute;
-    top: 50%;
-    right: 10px; /* Adjust right positioning as needed */
-    transform: translateY(-50%);
-    color: #aaa; /* Adjust icon color as needed */
-    pointer-events: none; /* Ensure the icon doesn't interfere with input focus */
-  }
-  
-  .point {
-    width: 5px;
-    height: 5px;
-    margin-top:12px;
-    margin-right:12px;
-    background-color: rgb(27, 8, 8);
-    border-radius: 50%; /* Makes the div round */
-  }
-  
 
-  /* Hide the default checkbox */
+.date-input:focus {
+  outline: none;
+}
+
+.fa-calendar-alt {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.point {
+  width: 5px;
+  height: 5px;
+  margin-top: 12px;
+  margin-right: 12px;
+  background-color: rgb(27, 8, 8);
+  border-radius: 50%;
+}
+
 input[type="checkbox"] {
-    display: none;
-  }
-  
-  /* Style the custom checkbox */
-  input[type="checkbox"] + label {
-    display: inline-block;
-    cursor: pointer;
-    padding-left: 25px; /* Space for the custom checkbox */
-  }
-  
-  /* Style the custom checkbox appearance */
-  input[type="checkbox"] + label:before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    background-color: white;
-    border-radius: 3px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  
-  /* Style the custom checkbox when checked */
-  input[type="checkbox"]:checked + label:before {
-    background-color: #293b56; /* Change color when checked */
-  }
-  
-  /* Style the checkmark */
-  input[type="checkbox"] + label:before {
-    content: "\2713"; /* Unicode checkmark character */
-    font-size: 14px;
-    color: white; /* Color of checkmark */
-    line-height: 18px;
-    text-align: center;
-  }
+  display: none;
+}
 
-  /* Style for combo box container */
-/* Style for combo box container */
+input[type="checkbox"] + label {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+}
+
+input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  background-color: white;
+  border-radius: 3px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+input[type="checkbox"]:checked + label:before {
+  background-color: #293b56;
+}
+
+input[type="checkbox"] + label:before {
+  content: "\2713";
+  font-size: 14px;
+  color: white;
+  line-height: 18px;
+  text-align: center;
+}
+
 .combo-box {
-  position: relative; /* Ensure proper positioning of the icon */
+  position: relative;
   display: inline-block;
 }
 
-/* Style for select dropdown */
 .combo-box select {
-  width: 200px; /* Adjust width as needed */
+  width: 200px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #fff;
   font-size: 16px;
   cursor: pointer;
-  appearance: none; /* Remove default dropdown arrow */
+  appearance: none;
 }
 
-/* Style for dropdown icon */
 .combo-box i {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
-  pointer-events: none; /* Ensure the icon does not interfere with select */
+  pointer-events: none;
 }
-
 
 .withdraw-members table {
   border-collapse: collapse;
   width: 100%;
 }
+
 .withdraw-members table th, .withdraw-members table td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
+
 .withdraw-members table th {
   background-color: #f2f2f2;
 }
+
 .withdraw-members table tbody tr:nth-child(even) {
   background-color: #f2f2f2;
 }
+
 .withdraw-members table tbody tr td input[type="checkbox"] {
   transform: scale(1.5);
   margin-right: 5px;
 }
-  
+
+
+
+/* membership management css */
+.member-dashboard {
+  display: flex;
+  flex-wrap: wrap; /* Allow flex items to wrap */
+  justify-content: space-between;
+  padding: 20px;
+  border-radius: 7px;
+  border: 1px solid #80808033;
+  position: relative;
+}
+
+.member-dashboard::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
+
+.member-dashboard .step {
+  flex-basis: calc(25% - 20px); /* 25% width with padding */
+  text-align: center;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.member-dashboard .step:last-child {
+  border-right: none; /* Remove right border for the last step */
+}
+.member-dashboard-h3{
+  color: #0098fc;
+  text-decoration: underline;
+}

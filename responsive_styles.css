@@ -1,124 +1,86 @@
 /* Adjustments for tablets */
 @media only screen and (max-width: 768px) {
    
-    header {
-        padding: 10px; /* Adjust padding for smaller screens */
-    }
-
-    .logo-container {
-        margin-right: auto; /* Push the logo container to the left */
-    }
-
-    .header-options-right {
-        margin-left: auto; /* Push the right options to the right */
-    }
-
-    .left-menu {
-        width: 180px; /* Decrease the width of the left menu */
-    }
-
-    .right-content {
-        margin-left: 180px; /* Adjust margin to account for the width of the left menu */
-        width: calc(100% - 180px); /* Set width to occupy full width initially */
-    }
-
-    .left-menu.collapsed + main .right-content {
-        margin-left: 0; /* Reset margin when left menu is collapsed */
-        width: calc(100% - 20px); /* Adjust width to occupy full width when left menu is collapsed */
-    }
-
-    .find-portion {
-        flex-direction: column; /* Stack buttons vertically */
-        align-items: stretch; /* Stretch buttons to full width */
-      }
-    
-}
-
-/* Adjustments for mobile devices */
-@media only screen and (max-width: 576px) {
- 
-    .responsive-icon {
-        display: block; /* Show the responsive icon on mobile devices */
-    }
-
-    .header-options-left,
-    .header-options-right {
-        display: none; /* Hide the options on mobile devices */
-    }
-
-    header {
-        align-items: flex-start; /* Align items to the start of the container */
-        justify-content: space-between; 
-    }
-
-    .logo-container {
-        margin-right: 0; /* Reset margin */
-        margin-bottom: 10px; /* Add some spacing between logo and options */
-    }
-
-    .header-options-left,
-    .header-options-right {
-        margin-left: 0; /* Reset margin */
-    }
-
-    .left-menu {
-        width: 100%; /* Make the left menu occupy full width */
-    }
-
-    .left-menu.collapsed + main .right-content {
-        margin-left: 0; /* Reset margin when left menu is collapsed */
-        width: 100%; /* Adjust width to occupy full width when left menu is collapsed */
-    }
-
-    .right-content {
-        margin-left: 0; /* Reset margin */
-        width: 100%; /* Make the right content occupy full width */
-    }
-
-    
-}
-
-@media screen and (max-width: 600px) {
-    .tabcontent table {
-      width: 100%;
-      display: block;
-      overflow-x: auto;
-    }
-  
-    .tabcontent th, td {
-      width: auto;
-      white-space: nowrap;
-    }
-  
-    .tabcontent th:nth-child(1), td:nth-child(1) {
-      min-width: 100px; /* Minimum width for first column */
-    }
-    
-    .tabcontent th:nth-child(2), td:nth-child(2) {
-      min-width: 150px; /* Minimum width for second column */
-    }
-  
-    /* Define minimum width for other columns as needed */
-    .checkbox-row {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-  
-    .checkbox-row > div {
-        margin-bottom: 10px;
-    }
-  
-    .search-row {
-      flex-direction: column;
-      align-items: stretch;
+  header {
+    padding: 10px;
+    align-items: flex-start; 
+    justify-content: space-between; 
   }
-  
+
+  .logo-container {
+    margin-right: auto; 
+    margin-left: 0; /* Corrected margin */
+    margin-bottom: 10px; 
+  }
+
+  .header-options-right {
+    margin-left: auto; 
+  }
+
+  .find-portion {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: stretch; /* Stretch buttons to full width */
+  }
+
+  .tabcontent table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .tabcontent th, .tabcontent td {
+    width: auto;
+    white-space: nowrap;
+  }
+
+  .tabcontent th:nth-child(1), .tabcontent td:nth-child(1) {
+    min-width: 100px; /* Minimum width for first column */
+  }
+
+  .tabcontent th:nth-child(2), .tabcontent td:nth-child(2) {
+    min-width: 150px; /* Minimum width for second column */
+  }
+
+  /* Define minimum width for other columns as needed */
+  .checkbox-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .checkbox-row > div {
+    margin-bottom: 10px;
+  }
+
+  .search-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
   .search-row .combo-box,
   .search-row .full-cover-input {
-      width: 100%;
-      max-width: none;
-      margin-right: 0;
-      margin-top: 10px;
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+
+  .find-download,
+  .action-download,
+  .action-download-options {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .find-download .combo-box,
+  .find-download .full-cover-input,
+  .action-download .combo-box,
+  .action-download .full-cover-input,
+  .action-download-options .combo-box,
+  .action-download-options .full-cover-input {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+    margin-top: 10px;
   }
 
   /* Adjustments for the .first-row */
@@ -138,26 +100,54 @@
     margin: 5px 0; /* Add margin for spacing */
   }
 
-  /* Style for the date input container */
   .date-input-container {
-    flex-direction: column; /* Stack items vertically */
-    align-items: stretch; /* Stretch items to full width */
-  }
-    
+    flex-direction: column; 
+    align-items: stretch; 
   }
 
+  .responsive-icon {
+    display: block; 
+  }
 
-  /* Media query for desktop */
+  .header-options-left,
+  .header-options-right {
+    display: none; 
+    margin-left: 0;
+  }
+
+  .left-menu {
+    margin-top: 16px;
+    width: 100%; /* Make the left menu occupy full width */
+  }
+
+  .left-menu.collapsed + main .right-content {
+    margin-left: 0; /* Reset margin when left menu is collapsed */
+    width: 100%; /* Adjust width to occupy full width when left menu is collapsed */
+  }
+
+/* Membership management */
+.member-dashboard {
+  flex-direction: column; /* Change to column layout */
+  align-items: stretch; /* Stretch items to full width */
+}
+
+.member-dashboard .step {
+  flex-basis: calc(100% - 20px); /* Full width with padding */
+  border-right: none; /* Remove right border */
+  margin-bottom: 20px; /* Add some space between steps */
+  border-bottom: 1px solid #ccc; /* Add border below each step */
+}
+
+.member-dashboard .step:last-child {
+  border-bottom: none; /* Remove border for the last step */
+}
+
+}
+
+/* Media query for desktop */
 @media only screen and (min-width: 768px) {
-    .find-portion {
-      margin-left: auto; /* Push buttons to the right */
-      width: 50%; /* Half of the screen width */
-    }
+  .find-portion {
+    margin-left: auto; /* Push buttons to the right */
+    width: 50%; /* Half of the screen width */
   }
-  
-
-
-  
-
-
-  
+}

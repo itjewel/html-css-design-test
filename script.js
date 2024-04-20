@@ -1,19 +1,43 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const collapseButton = document.getElementById("collapseButton");
-    const responsiveIcon = document.getElementById("responsiveIcon");
-    const leftMenu = document.querySelector(".left-menu");
+  const collapseButton = document.getElementById("collapseButton");
+  const responsiveIcon = document.getElementById("responsiveIcon");
+  const leftMenu = document.querySelector(".left-menu");
 
-    // Toggle collapsed class on left menu when collapse button is clicked
-    collapseButton.addEventListener("click", function() {
-        leftMenu.classList.toggle("collapsed");
-        collapseButton.classList.toggle("collapsed"); // Toggle collapsed class on the button itself
-    });
+  // Function to check if the screen is in responsive mode
+  function isResponsiveMode() {
+      return window.innerWidth <= 576; // Assuming 576px is the breakpoint for responsive mode
+  }
 
-    // Toggle collapsed class on left menu when responsive icon is clicked
-    responsiveIcon.addEventListener("click", function() {
-        leftMenu.classList.toggle("collapsed");
-        responsiveIcon.classList.toggle("collapsed"); // Toggle collapsed class on the button itself
-    });
+  // Function to toggle the collapsed state of the left menu
+  function toggleLeftMenu() {
+      leftMenu.classList.toggle("collapsed");
+      collapseButton.classList.toggle("collapsed"); // Toggle collapsed class on the button itself
+      responsiveIcon.classList.toggle("collapsed"); // Toggle collapsed class on the button itself
+  }
+
+  // Initial check to hide the left menu if in responsive mode
+  if (isResponsiveMode()) {
+      leftMenu.classList.add("collapsed");
+  }
+
+  // Toggle collapsed class on left menu when collapse button is clicked
+  collapseButton.addEventListener("click", function() {
+      toggleLeftMenu();
+  });
+
+  // Toggle collapsed class on left menu when responsive icon is clicked
+  responsiveIcon.addEventListener("click", function() {
+      toggleLeftMenu();
+  });
+
+  // Listen for window resize events to handle changes in responsive mode
+  window.addEventListener("resize", function() {
+      if (isResponsiveMode()) {
+          leftMenu.classList.add("collapsed");
+      } else {
+          leftMenu.classList.remove("collapsed");
+      }
+  });
 });
 
 
