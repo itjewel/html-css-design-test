@@ -548,3 +548,7 @@ input[type="checkbox"] + label:before {
   margin-right: 10px;
 }
 
+
+.table-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
