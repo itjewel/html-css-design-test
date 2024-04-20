@@ -539,3 +539,13 @@ input[type="checkbox"] + label:before {
   color: #0098fc;
   text-decoration: underline;
 }
+
+.custom-icon {
+  background-color: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust shadow as needed */
+  border-radius: 8px; /* Adjust border radius as needed */
+  padding: 5px; /* Adjust padding as needed */
+  font-size:15px;
+  margin-right: 10px;
+}
+
